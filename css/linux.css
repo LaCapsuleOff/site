@@ -1,0 +1,98 @@
+@import url(variables.css);
+@import url(footer.css);
+#coche-linux {
+    display: var(--no);
+}
+label #linux, label #fermer {
+    position: var(--rel);
+    cursor: var(--point);
+    width: var(--home);
+    height: var(--home);
+    transition: var(--slide);
+    z-index: 5;
+}
+#coche-linux:checked ~ .page-linux {
+    height: var(--cont-h);
+    bottom: var(--pos-fermer);
+}
+#coche-linux:checked ~ label #linux {
+    display: var(--no);
+    pointer-events: var(--no);
+}
+#coche-linux:checked ~ label #fermer {
+    display: var(--blo);
+    bottom: var(--res);
+}
+.page-linux {
+    position: var(--fix);
+    right: var(--res);
+    bottom: var(--pos-page);
+    display: var(--fl);
+    flex-flow: var(--desk);
+    width: var(--L);
+    height: var(--h);
+    background: var(--home-page);
+    box-shadow: var(--home-shadow);
+    transition: var(--slide); 
+}
+.page-linux i{
+    position: var(--abs);
+    top: var(--liseret-t);
+    left: var(--liseret-l);
+    display: var(--fl);
+    flex-flow: var(--desk);
+    justify-content: var(--cen);
+    align-items: var(--cen);
+    width: var(--cont-h);
+    height: var(--liseret-h);
+    background: var(--bg-lis);
+    border-radius: var(--liseret-bord-1);
+    border-bottom-left-radius: var(--res);
+    z-index: 7;
+}
+.page-linux i span {
+    color: var(--texte);
+    font-size: var(--bot);
+    font-family: var(--pol);
+    z-index: 8;
+}
+
+/*****************************************************
+******************************************************
+************************** contenu de la page ********
+******************************************************
+******************************************************/
+
+#tutos {
+    display: var(--blo);
+    position: var(--rel);
+    width: var(--w);
+    height: var(--cont-h);
+    font-family: var(--pol);
+    z-index: 6;
+}
+.container {
+    display: var(--fl);
+    flex-flow: var(--desk);
+    align-items: var(--sa);
+    justify-content: var(--sa);
+    height: var(--h);
+    padding-top: var(--bg);
+    background-color: var(--home-page);
+    z-index: 6;
+}
+.lien > a {
+    display: var(--fl);
+    flex-flow:  var(--mob);
+    align-items: var(--cen);
+} 
+img {
+    width: var(--bg);
+    height: var(--a);
+    margin-top: var(--bg);
+}
+.nom {
+    text-align: var(--cen);
+    color: var(--blanc);
+    margin-top: var(--boite);
+}

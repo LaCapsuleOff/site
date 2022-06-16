@@ -1,0 +1,116 @@
+@import url(../variables.css);
+body {
+  display: var(--fl);
+  position: var(--rel);
+  flex-flow: var(--mob);
+  justify-content: space-between;
+  margin: var(--res);
+  padding: var(--res);
+  background-color: var(--bg-color2);
+  z-index: 0;
+}
+aside a {
+  position: var(--fix);
+  bottom: var(--pad);
+  right: var(--text);
+  z-index: 7;
+}
+aside a img {
+  width: var(--home);
+  height: var(--home);
+  z-index: 10;
+}
+header {
+  display: var(--fl);
+  position: var(--stick);
+  justify-content: var(--cen);
+  align-items: var(--cen);
+  top: var(--res);
+  left: var(--res);
+  background-color: var(--home-page);
+  border-radius: 0 0 20px 20px;
+  font-family: monospace, "sans-sérif";
+  font-style: oblique;
+  color: var(--blanc);
+  z-index: 2;
+}
+h1 {
+  text-align: center;
+}
+header:hover {
+  color: var(--bg-lis);
+}
+.top {
+  margin-top: 50px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+.avatarphil {
+  margin-left: var(--line);
+  width: var(--bg-lab);
+  height: var(--bg-lab);
+}
+.citation {
+  margin-top: 4%;
+  margin-left: 1%;
+  padding: 1em 1em 1em 2em;
+  display: var(--fl);
+  flex-flow: var(--desk);
+  justify-content: var(--cen);
+  align-items: var(--cen);
+  width: var(--cont-w);
+  height: auto;
+  background-color: var(--bg-lis);
+  border-radius: 0 50px 50px 50px;
+  box-shadow: var(--neumorph);
+  font-family: monospace, "sans-sérif";
+  color: white;
+  z-index: 3;
+}
+.top2 {
+  margin-top: 50px;
+  width: var(--cont-w);
+  display: var(--fl);
+  flex-flow: var(--desk-nw);
+  justify-content: var(--end);
+  align-items: var(--home-j);
+}
+.circle2{
+  margin-top: var(--negatop);
+}
+.avatarphil2 {
+  margin-right: var(--etoile);
+  width: var(--bg-lab);
+  height: var(--bg-lab);
+}
+.formevideo {
+  margin-top: var(--mt-v);
+  margin-left: var(--page);
+  display: var(--fl);
+  flex-flow: var(--desk);
+  justify-content: var(--cen);
+  align-items: var(--cen);
+  width: var(--illu-w);
+  height: var(--illu-h);
+  background: var(--bg-lis);
+  border-radius: 50px 0 50px 50px;
+  box-shadow: var(--neumorph);
+}
+.intro {
+  display: var(--fl);
+  width: var(--illu-w);
+  height: var(--illu-h);
+}
+
+video[src="/media/video/phil/signature.webm"] {
+  position: relative;
+  margin-left: var(--ml-v);
+  display: var(--fl);
+  justify-content: var(--cen);
+  align-items: var(--cen);
+  object-fit: var(--cov);
+  padding: var(--pad-v);
+  border-radius: var(--br-v);
+}

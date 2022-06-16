@@ -1,0 +1,167 @@
+@import url(resetForm.css);
+@import url(variables.css);
+@import url(animations.css);
+#coche-contact, #fermer{
+    display: var(--no);
+}
+label #contact {
+    order: 1;
+    position: var(--rel);
+    cursor: var(--point);
+    width: var(--home);
+    height: var(--home);
+    transition: var(--slide);
+    z-index: 7;
+}
+label #contact,
+label #fermer {
+    position: var(--rel);
+    cursor: var(--point);
+    width: var(--home);
+    height: var(--home);
+    transition: var(--slide);
+    z-index: 7;
+}
+#coche-contact:checked ~ .page-contact {
+    height: var(--cont-h);
+    bottom: var(--pos-fermer);
+    opacity: var(--visible);
+}
+#coche-contact:checked ~ label #contact {
+    display: var(--no);
+    pointer-events: var(--no);
+}
+#coche-contact:checked ~ label #fermer {
+    display: var(--blo);
+    bottom: var(--res);
+}
+.page-contact {
+    display: var(--fl);
+    position: var(--fix);
+    flex-flow: var(--mob);
+    justify-content: var(--cen);
+    align-items: var(--cen);    
+    right: var(--res);
+    bottom: var(--pos-page);
+    width: var(--L);
+    height: var(--h);
+    background: var(--home-page);
+    box-shadow: var(--home-shadow);
+    opacity: var(--invisible);
+    transition: var(--slide);
+}
+
+.page-contact i{
+    position: var(--abs);
+    top: var(--liseret-t);
+    left: var(--liseret-l);
+    display: var(--fl);
+    flex-flow: var(--desk);
+    justify-content: var(--cen);
+    align-items: var(--cen);
+    width: var(--cont-h);
+    height: var(--liseret-h);
+    background: var(--bg-lis);
+    border-radius: var(--liseret-bord-1);
+    border-bottom-left-radius: var(--res);
+}
+.page-contact i span {
+    position: var(--abs);
+    color: var(--texte);
+    font-size: var(--bot);
+    font-family: var(--pol);
+}
+
+/*****************************************************
+******************************************************
+************************** contenu de la page ********
+******************************************************
+******************************************************/
+
+form {
+    position: var(--abs);
+    top: var(--text);
+    margin-top: var(--m-top);
+    display: var(--fl);
+    flex-flow: var(--mob);
+    align-items: var(--sa);
+    justify-content: var(--ar);
+    width: var(--cont-h);
+}
+form input,
+form textarea {
+    margin: var(--pad);
+    padding: var(--bot);
+    height: var(--text);
+    font-size: var(--bot);
+    border-radius: var(--bot);
+    border: solid 2px;
+    color: var(--blanc);
+    outline: var(--res);
+}
+form input::placeholder,
+form textarea::placeholder {
+    color: var(--blanc);
+    display: var(--fl);
+    flex-flow: var(--desk);
+    align-items: var(--cen);
+    justify-content: var(--home-j);
+}
+form textarea {
+    height: var(--bg);
+}
+form input[type="submit"] {
+    height: var(--home);
+    width: var(--submit);
+    color: var(--blue);
+    background: var(--jaune);
+    vertical-align: var(--cen);
+    cursor: var(--point);
+}
+form input[type="submit"]:hover {
+    background: var(--bg-lis);
+    color: var(--texte);
+}
+form input:focus,
+form textarea:focus {
+    padding-left: var(--bot);
+    transition: var(--slide);
+    border: solid 2px;
+    background: var(--blanc);
+    color: var(--bg-lis);
+    background: var(--no);
+}
+form textarea:focus ~ form {
+    bottom: 5rem;
+}
+form input[type="text"]:valid,
+form input[type="mail"]:valid,
+form input[type="text"]:valid,
+form textarea:valid {
+    color: var(--vert);
+}
+
+  
+@media screen and (max-height: 660px) {
+    form {
+        height: 70%;
+    }
+    form input,
+    form textarea {
+        margin: var(--pad);
+        padding: var(--text);
+        height: var(--pad);
+    }
+}
+@media screen and (max-height: 500px) {
+    form {
+        height: 70%;
+    }
+    form input,
+    form textarea {
+        margin: var(--pad);
+        padding: var(--text);
+        height: var(--pad);
+    }
+}
+

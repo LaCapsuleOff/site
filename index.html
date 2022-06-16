@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ouvert à tous chaque vendredi de 14h à 19h30">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="media/img/lacapsule_favicon.png" type="image/x-icon">
+    <title>La Capsule Chantier d'insertion numérique pour les 18-30 ans basé à Morlaix.</title>
+    <meta property="og:title" content="La Capsule Chantier d'insertion numÃ©rique pour les 18-35 ans basÃ© Ã  Morlaix au 2d voie d'accÃ¨s au port." />
+    <meta property="og:type" content="text/html" />
+    <meta property="og:url" content="http://lacapsule.bzh/" />
+    <meta property="og:image" content="http://apple-touch-icon.png" />
+    <link rel="icon" type="image/png" href="https://github.com/lacapsule/V2/blob/main/img/lacapsule_favicon.png" />
+    <link rel="apple-touch-icon" href="https://github.com/lacapsule/V2/blob/main/img/apple-touch-icon.png" />
+    
+    <script src="script.bak/main.js"></script>
+</head>
+<body>   
+<header>
+    <div class="rs">
+        <div class="rs-link" onclick="dirLinkedin()" style="cursor: pointer;">
+            <a href="https://www.linkedin.com/in/la-capsule-9ba316205/?originalSubdomain=fr" target="_blank"><img src="media/img/linkedin.png" alt="Linkedin"></a>
+        </div>
+        <div class="rs-link" onclick="dirGithub()" style="cursor: pointer;">
+            <a href="https://github.com/lacapsule?tab=repositories" target="_blank"><img src="media/img/github.png" alt="Github"></a>
+        </div>
+        <div class="rs-link" onclick="dirDiscord()" style="cursor: pointer;">
+            <a href="https://discord.com/invite/7SAwbWC6ab" target="_blank"><img src="media/img/discord.png" alt="Discord"></a>
+        </div>
+    </div>  
+</header>
+<div class="dropdown">
+    <div class="bars"></div>
+    <div class="bars"></div>    
+</div>
+    <section class="dropdown-page">
+        <div class="dropdown-link">
+            <a href="https://blog.lacapsule.org"><div id="item">
+                <p> Le blog de la Capsule </p></a></div>
+            <a href="https://github.com/lacapsule/installationScript/archive/refs/heads/main.zip"><div id="item">
+                <p> Script d'installation (Linux) </p></a></div>
+            <a href="https://github.com/lacapsule/lacapsule"><div id="item">
+                <p> Logiciel Lacapsule (Linux) </p></a></div>
+            <a href="https://stock.lacapsule.org/"><div id="item">
+                <p> Logiciel de gestion </p></a></div>
+            <a href="https://github.com/lacapsule/Maintenance"><div id="item">
+                <p> Maintenance</p></a></div>
+            <a href="https://lestitcheurf0u.github.io/Quizz/"><div id="item">
+                <p> Quizz IBEP</p></a></div>
+                <section id="version"> 
+                    <span id="section"> Code source du site web </span>
+                <a href="https://github.com/lacapsule/V3"><div id="itemVersion">
+                    <p> V3 </p></a></div>
+                <a href="https://github.com/lacapsule/V2"><div id="itemVersion">
+                    <p> V2 </p></a></div>
+                <a href="https://github.com/lacapsule/V1"><div id="itemVersion">
+                    <p> V1 </p></a></div>
+                </section>
+        </div>
+    </section>
+
+    <script>
+        let dropdowntoggle = document.querySelector(".dropdown");
+        let opendropdown = document.querySelector(".dropdown-page");
+
+        dropdowntoggle.onclick = function () {
+            opendropdown.classList.toggle("open");
+            dropdowntoggle.classList.toggle("active");
+        };
+    </script>
+
+
+<main> 
+    <img class="bg" src="media/img/capsule.png" alt="logo de la capsule"/>
+</main>
+<footer class="dock">
+    <div class="info">
+        <input type="checkbox" name="check" onclick="onlyOne(this)" id="coche-info"/>
+        <label for="coche-info">
+            <img title="Informations" id="info" src="media/img/info.png" alt="icône d'info"/> 
+            <img title="Fermer" id="fermer" src="media/img/close.png" alt="icône de fermeture du menu"/>
+        </label>
+    <div class="page-info">
+        <i><span class="stick">Infos</span></i>
+        <iframe
+            class= "accueil-infos"
+            src="pages/infos.html"
+            width="90%"
+            height="50%"
+            allowfullscreen=""
+            rel="noopener noreferrer"
+            sandbox="allow-same-origin allow-popups allow-scripts"
+            loading="lazy">
+        </iframe>
+        </div>
+    </div> 
+    <div class="corbeille">
+        <input type="checkbox" name="check" onclick="onlyOne(this)" id="coche-corbeille">
+        <label for="coche-corbeille">
+            <img title="Trucs et astuces" id="corbeille" src="media/img/corbeille.png" alt="corbeille"/> 
+            <img title="Fermer" id="fermer" src="media/img/close.png" alt="icône de fermeture du menu"/>
+        </label>
+    <div class="page-corbeille">
+        <i><span class="stick">Trucs et astuces</span></i>
+        <iframe
+            class= "accueil-infos"
+            src="pages/corbeille.html"
+            width="90%"
+            height="50%"
+            allowfullscreen=""
+            rel="noopener noreferrer"
+            sandbox="allow-same-origin allow-scripts allow-popups"
+            loading="lazy">
+        </iframe>
+    </div>
+    </div>
+     
+    <div class="home">
+        <input type="checkbox" name="check" onclick="onlyOne(this)" id="coche-home">
+        <label for="coche-home">
+            <img title="Accueil" id="home" src="media/img/home.png" alt="icône du menu"/>    
+            <img title="Fermer" id="fermer" src="media/img/close.png" alt="icône de fermeture du menu"/>
+        </label>
+    <div class="page-home">
+        <i><span class="stick">Home</span></i>
+        <iframe
+            class= "accueil-infos"
+            src="pages/home.html"
+            width="90%"
+            height="50%"
+            allowfullscreen=""
+            rel="noopener noreferrer"
+            sandbox="allow-same-origin allow-scripts allow-popups"
+            loading="lazy">
+        </iframe>
+    </div>  
+    </div>
+    <div class="contact">
+        <input type="checkbox" name="check" onclick="onlyOne(this)" id="coche-contact">
+        <label for="coche-contact">
+            <img title="Nous Contacter" id="contact" src="media/img/contact.png" alt="icône de contact"/>   
+            <img title="Fermer" id="fermer" src="media/img/close.png" alt="icône de fermeture du menu"/>
+        </label>
+        <div class="page-contact">
+            <i><span class="stick">Contact</span></i>
+            <form action="https://lacapsule.org/php/mail/mail.php" method="POST">
+                <input type="text" name="nom" id="nom" required placeholder="Votre nom..." title="Entrez votre nom">
+                <input type="mail" name="email" placeholder="adresse@email.com" title="Entrez votre mail" required pattern="^[a-zA-Z.*.0-9]+@[a-zA-Z0-9]+.[a-zA-Z]{2,6}$" title="Ce n'est pas une adresse mail valide !" required/>
+                <input type="text" name="sujet" id="sujet" title="Entrez le sujet" required placeholder="Sujet de votre contact...">
+                <input type="hidden" name="raison">
+                <textarea name="message" id="message" title="Entrez votre message" cols="20" rows="5" required placeholder="Message..."></textarea>
+                <button class="boutons">
+                    <input type="submit" value="Envoyer">
+                </button>  
+            </form>
+        </div>   
+    </div>
+     
+    <div class="linux">
+        <input type="checkbox" name="check" onclick="onlyOne(this)" id="coche-linux"/>
+        <label for="coche-linux">
+            <img title="Tutoriels" id="linux" src="media/img/tuto-close.png" alt="icône des tutos"/> 
+            <img title="Fermer" id="fermer" src="media/img/close.png" alt="icône de fermeture du menu"/>
+        </label>
+    <div class="page-linux">
+        <i><span class="stick">Tutos</span></i>
+        <iframe
+            class="accueil-tutos"
+            src="pages/tutos.html"
+            width="90%"
+            height="50%"
+            allowfullscreen=""
+            rel="noopener noreferrer"
+            sandbox="allow-same-origin allow-popups allow-scripts"
+            loading="lazy"></iframe>
+        </div>
+    </div>  
+</footer>
+</body>
+</html>

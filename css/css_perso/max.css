@@ -1,0 +1,123 @@
+@import url(../variables.css);
+@import url(../reset.css);
+
+html,
+body {
+  display: var(--fl);
+  position: var(--rel);
+  flex-flow: var(--mob);
+  align-items: var(--cen);
+  align-content: var(--cen);
+  justify-content: var(--ar);
+  justify-items: var(--ar);
+  left: var(--res);
+  top: var(--res);
+  right: var(--res);
+  bottom: var(--res);
+  width: var(--L);
+  height: var(--L);
+  margin: var(--res);
+  padding: var(--res);
+  overflow: var(--h);
+  background: var(--bg-color);
+  font-family: var(--pol);
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  z-index: 0;
+}
+aside a {
+  position: var(--fix);
+  bottom: calc(var(--home) + var(--text));
+  right: calc(var(--home) + var(--text));
+  z-index: 4;
+}
+
+aside a img {
+  position: var(--fix);
+  width: var(--home);
+  height: var(--home);
+  z-index: 4;
+}
+header {
+  width: 100%;
+  height: 100%;
+  position: var(--rel);
+  top: 0;
+  left: 0;
+  background: url("../../media/img/perso/max/bgmax.png") no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  z-index: -2;
+}
+.content-header {
+  width: 98%;
+  height: auto;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+.content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+
+.content img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: auto;
+  z-index: 2;
+}
+
+.content h1 {
+  text-transform: uppercase;
+  color: var(--texte);
+  font-family: var(--pol);
+  background: var(--bg-lis);
+  font-size: var(--line);
+}
+
+.content h2 {
+  text-transform: uppercase;
+  color: var(--texte);
+  font-family: var(--pol);
+  font-size: var(--icone);
+}
+
+.content p {
+  color: var(--texte);
+  font-size: var(--text);
+  font-family: var(--pol);
+  font-weight: 800;
+  background: var(--bg-lis);
+  padding: 10px;
+}
+.content:nth-child(2){
+    align-items: flex-start;
+}
+
+@media screen and (max-width: 900px) {
+  .content-header {
+    display: flex;
+    flex-flow: column;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 2;
+  }
+  .content:nth-child(2),
+  .content:nth-child(3) {
+    align-items: center;
+    z-index: 2;
+  }
+}

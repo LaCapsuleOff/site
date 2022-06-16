@@ -1,0 +1,181 @@
+@import url(variables.css);
+@import url(footer.css);
+#coche-home {
+    display: var(--no);
+}
+#coche-home:checked ~ .page-home {
+    width: var(--L);
+    height: var(--cont-h);
+    bottom: var(--pos-fermer);
+    opacity: var(--visible);
+}
+#coche-home:checked ~ label #home {
+    display: var(--no);
+    pointer-events: var(--no);
+}
+#coche-home:checked ~ label #fermer {
+    display: var(--blo);
+    bottom: var(--res);
+}
+label #home, label #fermer {
+    position: var(--rel);
+    cursor: var(--point);
+    width: var(--home);
+    height: var(--home);
+    transition: var(--slide);
+    z-index: 5;
+}
+.page-home {
+    display: var(--fl);
+    position: var(--fix);
+    flex-flow: var(--desk);
+    justify-content: var(--home-j);
+    align-items: var(--home-j);
+    right: var(--res);
+    bottom: var(--pos-page);
+    width: var(--cont-h);
+    height: var(--cont-h);
+    background: var(--home-page);
+    opacity: var(--invisible);
+    transition: var(--slide); 
+    z-index: 3;
+}
+.page-home i{
+    position: var(--abs);
+    top: var(--liseret-t);
+    left: var(--liseret-l);
+    display: var(--fl);
+    flex-flow: var(--desk);
+    justify-content: var(--cen);
+    align-items: var(--cen);
+    width: var(--cont-h);
+    height: var(--liseret-h);
+    background: var(--bg-lis);
+    border-radius: var(--liseret-bord-1);
+    border-bottom-left-radius: var(--res);
+    z-index: 3;
+}
+.page-home i {
+    color: var(--blanc);
+    font-size: var(--bot);
+    font-family: var(--pol);
+    font-variant: normal;
+    z-index: 6;
+}
+
+/*****************************************************
+******************************************************
+************************** contenu de la page ********
+******************************************************
+******************************************************/
+
+#home {
+    display: var(--blo);
+    position: var(--rel);
+    width: var(--L);
+    height: var(--if);
+    font-family: var(--pol);
+}
+.container-home {
+    display: var(--fl);
+    flex-flow: var(--desk);
+    align-items: var(--submit);
+    justify-content: var(--sa);
+    width: var(--L);
+    height: var(--cont-h);
+    padding-top: var(--bg-lab);
+    padding-bottom: var(--page);
+    background-color: var(--home-page);
+    z-index: 4;
+}
+article {
+    display: var(--blo);
+    position: var(--rel);
+    top: var(--res);
+    bottom: var(--res);
+    z-index: 4;
+}
+.titre {
+    display: var(--fl);
+    flex-flow: var(--desk);
+    align-items: var(--cen);
+    justify-content: var(--cen);
+    border-radius: var(--liseret-boucle-w);
+    color: var(--texte);
+    width: var(--cont-w);
+    max-height: var(--bot);
+    background-color: var(--caps);
+    z-index: 4;
+}
+.lien > a {
+    display: var(--fl);
+    flex-flow:  var(--mob);
+    align-items: var(--cen);
+    width: var(--btn);
+    height: var(--btn);
+    transition: 1s ease;
+    z-index: 4;
+} 
+.lien:hover > a:hover {
+    transform: var(--dock);
+    text-shadow: var(--ombre);
+    box-shadow: var(--shad);
+    filter: contrast(-20%) brightness(-20%);
+    z-index: 4;
+} 
+.avatar {
+    width: var(--bg);
+    height: var(--a);
+    padding-left: var(--line);
+    padding-right: var(--line);
+    z-index: 4;
+}
+.nom {
+    width: var(--bg);
+    height: var(--bg);
+    margin-top: var(--pad);
+    text-align: var(--cen);
+    padding-top: var(--pad);
+    color: var(--blanc);
+    z-index: 4;
+}
+@media screen and (max-width: 1440px) {
+    .container-home {
+        display: var(--fl);
+        flex-flow: var(--desk);
+        align-items: var(--home-j);
+        justify-content: var(--cen);
+        width: var(--L);
+        height: var(--cont-h);
+        padding-top: var(--bg-lab);
+        padding-bottom: var(--text);
+        background-color: var(--home-page);
+        z-index: 6;
+    }
+    .lien > a {
+        display: var(--fl);
+        flex-flow:  var(--mob);
+        align-items: var(--cen);
+        justify-content: var(--sa);
+        width: var(--btn);
+        height: var(--boite);
+        transition: 1s ease;
+    } 
+    .avatar {
+        width: var(--bg);
+        height: var(--bg);
+        padding-left: var(--line);
+        padding-right: var(--line);
+    }
+    .nom {
+        width: var(--bg);
+        height: var(--bg);
+        margin-top: var(--pad);
+        text-align: var(--cen);
+        padding-top: var(--pad);
+        padding-left: var(--line);
+        padding-bottom: var(--pad);
+        padding-right: var(--line);
+        color: var(--blanc);
+    }
+}

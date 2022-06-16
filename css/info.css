@@ -1,0 +1,304 @@
+@import url(variables.css);
+@import url(footer.css);
+#coche-info {
+    display: var(--no);
+}
+label #info, label #fermer {
+    position: var(--rel);
+    cursor: var(--point);
+    width: var(--home);
+    height: var(--home);
+    transition: var(--slide);
+    z-index: 5;
+}
+#coche-info:checked ~ .page-info {
+    height: var(--cont-h);
+    bottom: var(--pos-fermer);
+}
+#coche-info:checked ~ label #info {
+    display: var(--no);
+    pointer-events: var(--no);
+}
+#coche-info:checked ~ label #fermer {
+    display: var(--blo);
+    bottom: var(--res);
+}
+.page-info {
+    position: var(--fix);
+    right: var(--res);
+    bottom: var(--pos-page);
+    display: var(--fl);
+    flex-flow: var(--desk);
+    width: var(--L);
+    height: var(--h);
+    background: var(--home-page);
+    box-shadow: var(--home-shadow);
+    transition: var(--slide); 
+}
+.page-info i{
+    position: var(--abs);
+    top: var(--liseret-t);
+    left: var(--liseret-l);
+    display: var(--fl);
+    flex-flow: var(--desk);
+    justify-content: var(--cen);
+    align-items: var(--cen);
+    width: var(--cont-h);
+    height: var(--liseret-h);
+    background: var(--bg-lis);
+    border-radius: var(--liseret-bord-1);
+    border-bottom-left-radius: var(--res);
+    z-index: 8;
+}
+.page-info i span {
+    color: var(--texte);
+    font-size: var(--bot);
+    font-family: var(--pol);
+    z-index: 8;
+}
+
+/*****************************************************
+******************************************************
+************************** contenu de la page ********
+******************************************************
+******************************************************/
+
+#infos {
+    display: var(--blo);
+    position: var(--rel);
+    width: var(--L);
+    height: var(--if);
+    background-color: var(--home-page);
+    z-index: 6;
+}
+.container-infos {
+    display: var(--gr);
+    grid-template-areas: var(--temp-inf);
+    grid-template-rows: var(--liseret) var(--icone) var(--frac) var(--a) var(--a) var(--a);
+    grid-template-columns: var(--frac) var(--frac);
+    grid-gap: var(--text);
+    height: var(--a);
+    padding-top: var(--bg-lab);
+    background-color: var(--tran);
+    z-index: 7;
+}
+span {
+    display: var(--fl);
+    flex-flow: var(--desk);
+    align-items: var(--sa);
+    justify-content: var(--sa);
+    text-align: var(--cen);
+    color: var(--texte);
+    z-index: 8;
+}
+span:not(.stick)  {
+    display: var(--blo);
+    position: var(--rel);
+    height: var(--a);
+    padding: var(--text);
+    border-radius: var(--liseret-h);
+    -webkit-box-shadow: var(--neumorph);
+    box-shadow: var(--neumorph);
+}
+#carte {
+    grid-area: carte;
+    position: var(--rel);
+    display: var(--fl);
+    flex-flow: var(--desk);
+    height: var(--btn);
+    align-items: var(--sa);
+    justify-content: var(--cen);
+    z-index: 8;
+}
+a.map {
+    width: var(--cont-w);
+    height: var(--a);
+    background-image: url('../media/img/map.png');
+    background-size: cover;
+    background-position: var(--cen);
+    border-radius: var(--liseret-boucle-t);
+}
+mark.alert {
+    grid-area: alert;
+    display: var(--fl);
+    flex-flow: var(--desk);
+    align-items: var(--cen);
+    justify-content: var(--cen);
+    text-align: var(--cen);
+    border-radius: var(--liseret-boucle-t);
+    width: var(--alert);
+    min-height: var(--a);
+    margin-left: var(--marge);
+}
+.adresse {
+    grid-area: adresse;
+    border: var(--text) var(--gris);
+    background-color: var(--bg-pages);
+}
+.ouverture {
+    grid-area: ouverture;
+    border: var(--text) var(--lis);
+    background-color: var(--bg-lis);
+}
+.description {
+    grid-area: description;
+    border: 2px solid var(--bg-lis);
+    line-height: var(--line);
+}
+.equipe {
+    grid-area: equipe;
+    align-self: var(--cen);
+    display: var(--fl);
+    flex-flow: var(--desk);
+    align-items: var(--cen);
+    justify-content: var(--cen);
+    width: var(--a);
+    height: var(--a);
+}
+
+.equipe .carte {
+    display: var(--fl);
+    flex-flow: var(--mob);
+    align-content: var(--cen);
+    justify-content: var(--cen);
+    align-items: center;
+    background: var(--bg-pages);
+    border-radius: 3rem;
+    border: 3px solid var(--bg-lis);
+    height: var(--a);
+    margin: 30px;
+}
+#equipe, .avatar {
+    display: var(--inblo);
+    position: var(--rel);
+    width: var(--bg);
+    height: var(--a);
+    margin-top: var(--text);
+}
+.carte .icones a img {
+    width: 50px;
+    height: 50px;
+}
+.def {
+    display: var(--blo);
+    font-size: var(--line);
+    color: var(--texte);
+    padding: var(--pad);
+}
+.activite {
+    display: var(--fl);
+    flex-flow: var(--desk);
+    align-items: var(--sa);
+    justify-content: var(--cen);
+    background: var(--bg-pages);
+    border-radius: var(--liseret-h);
+    border: 3px solid var(--bg-lis);
+    padding-bottom: var(--line);
+    width: var(--L);
+    height: var(--a);
+}
+.liens {
+    width: var(--L);
+    font-size: var(--titre);
+    color: var(--bg-lis);
+    padding: var(--text);
+    border: var(--round);
+    transition: var(--slide);
+}
+.liens:hover {
+    color: var(--jaune);
+}
+.telechargements {
+    display: var(--fl);
+    flex-flow: var(--desk);
+    align-items: var(--sa);
+    justify-content: var(--cen);
+    background: var(--bg-pages);
+    border-radius: var(--liseret-h);
+    border: 3px solid var(--bg-lis);
+    padding-bottom: var(--line);
+    width: var(--L);
+    height: var(--a);
+}
+.docs {
+    width: var(--L);
+    font-size: var(--titre);
+    color: var(--bg-lis);
+    padding: var(--text);
+    border: var(--round);
+    transition: var(--slide);
+}
+.docs:hover {
+    color: var(--jaune);
+}
+h1 {
+    font-size: var(--bot);
+}
+h2 {
+    font-size: var(--text);
+}
+h3 {
+    font-size: var(--text);
+}
+
+
+.fiche-contact:hover {
+    bottom: var(--res);
+}
+a {
+    color: var(--jaune);
+}
+@media screen and (max-width: 500px){
+    #infos,
+    .container-infos {
+        display: var(--fl);
+        position: var(--rel);
+        flex-flow: var(--desk);
+        align-items: var(--sa);
+        justify-content: var(--sa);
+        width: var(--L);
+        height: var(--a);
+        background-color: var(--home-page);
+        z-index: 6;
+    }
+    span {
+        display: var(--fl);
+        flex-flow: var(--mob);
+        align-items: var(--cen);
+        justify-content: var(--cen);
+        text-align: var(--cen);
+        color: var(--texte);
+        z-index: 8;
+    }
+    #carte {
+        height: var(--liseret);
+    }
+    a.map {
+        width: var(--w);
+        height: var(--liseret);
+        background-image: url('../media/img/map.png');
+        background-size: cover;
+        background-position: var(--cen);
+        border-radius: var(--liseret-boucle-t);
+    }
+    .alert {
+        display: var(--blo);
+        position: var(--rel);
+        width: var(--w);
+        height: var(--icone);
+        margin-right: var(--bot);
+    }
+
+    .adresse, 
+    .ouverture,
+    .description,
+    #activite,
+    #telechargements {
+        display: var(--blo);
+        position: var(--rel);
+        width: var(--w);
+        height: var(--a);
+        margin-left: var(--res);
+        margin-right: var(--res);
+    }
+}
